@@ -48,3 +48,15 @@ var rockA = rockQ.toUpperCase();
   }else{
     alert('I love rock n\' roll');
   }
+
+  var colorQ = prompt('Is my favorite color red?');
+  var colorA = colorQ.toUpperCase();
+  
+    console.log(colorA);
+    console.log(correct + 'NO');
+
+    if(colorA === 'NO'|| colorA === 'N' || colorA === 'NOPE' ){
+      alert('You\'re right, there are so many beautiful colors how could I pick just one!');
+    }else{ 
+      alert('It depends on the day');
+    }
