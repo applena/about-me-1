@@ -2,46 +2,47 @@
 
 var correct = 'correct answer: ';
 
-var mabelQ = prompt('What\' my dog\'s name?');
+var mabelQ = prompt('Do I have a dog named Maple');
 var mabelA = mabelQ.toUpperCase();
-var correctMabel = 'MABEL';
-  console.log(mabelA);
-  console.log(correct + correctMabel);
 
-  if(mabelA === correctMabel){
-    alert('Ding, ding, ding!');
+  console.log(mabelA);
+  console.log(correct + 'NO');
+
+  if(mabelA === 'YES' || mabelA === 'YEA' || mabelA === 'YA' || mabelA === 'Y'){
+    alert('She wouldn\'t mind if you called her Maple but her name is Mabel');
   }else{
-    alert('nope! You\'re 0 for 1');
+    alert('Ding, ding, ding!');
   }
 
-var signQ = prompt('What\'s my sign?');
-var signA = signQ.toUpperCase();
-var correctSign = 'TAURUS';
-  console.log(signA);
-  console.log(correct + correctSign);
 
-    if(signA === correctSign){
-      alert('You know me so well!');
+var signQ = prompt('Am I a Gemini?');
+var signA = signQ.toUpperCase();
+
+  console.log(signA);
+  console.log(correct + 'NO');
+
+    if(signA === 'YES' || signA === 'YEA' || signA === 'YA' || signA === 'Y'){
+      alert('Nope! I\'m a taurus');
     }else{
-      alert('noooo');         
+      alert('You\'re correct! I\'m a taurus!');
     } 
 
-var animalQ = prompt('If I were another species what would I want to be?');
+var animalQ = prompt('Is my favorite animal a dolphin?');
 var animalA = animalQ.toUpperCase();
-var correctAnimal = 'DOLPHIN';
-  console.log(animalA);
-  console.log(correct + correctAnimal);
 
-  if(animalA === correctAnimal ){
+  console.log(animalA);
+  console.log(correct + 'YES');
+
+  if(animalA === 'YES' || animalA === 'YEA' || animalA === 'YA' || animalA === 'Y'){
     alert('Booooyow! you got it');
   }else{
-    alert(':(');
+    alert('Dolphins are in fact my favortie animal.');
   }
 
 var rockQ = prompt('Do I like rock and roll?');
 var rockA = rockQ.toUpperCase();
   console.log(rockA);
-  console.log(correct + 'yes');
+  console.log(correct + 'YES');
 
   if(rockA === 'YES' || rockA === 'YEA' || rockA === 'YA' || rockA === 'Y'){
     alert('yaaaas, I love rock n\' roll');
@@ -56,7 +57,9 @@ var rockA = rockQ.toUpperCase();
     console.log(correct + 'NO');
 
     if(colorA === 'NO'|| colorA === 'N' || colorA === 'NOPE' ){
-      alert('You\'re right, there are so many beautiful colors how could I pick just one!');
+      alert('You\'re right! how could I pick just one?');
     }else{ 
       alert('It depends on the day');
     }
+
+    
