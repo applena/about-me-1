@@ -5,6 +5,7 @@ var correctCnt = 0;
 var correct = 'correct answer: ';
 
 //Q1
+console.log('Q1');
 var mabelQ = prompt('Do I have a dog named Maple');
 var mabelA = mabelQ.toUpperCase();
 
@@ -19,6 +20,7 @@ var mabelA = mabelQ.toUpperCase();
   }
 
 //Q2
+console.log('Q2');
 var signQ = prompt('Am I a Gemini?');
 var signA = signQ.toUpperCase();
 
@@ -32,6 +34,7 @@ var signA = signQ.toUpperCase();
       correctCnt++;
     } 
 //Q3
+console.log('Q3');
 var animalQ = prompt('Is my favorite animal a dolphin?');
 var animalA = animalQ.toUpperCase();
 
@@ -39,15 +42,17 @@ var animalA = animalQ.toUpperCase();
   console.log(correct + 'YES');
 
   if(animalA === 'YES' || animalA === 'YEA' || animalA === 'YA' || animalA === 'Y'){
-    alert('Booooyow! you got it');
+    alert('Booooyow!');
     correctCnt++;
   }else{
-    alert('Dolphins are my favortie animal.');
+    alert('Actually, dolphins are my favortie animal.');
   }
 
 //Q4
+console.log('Q4');
 var rockQ = prompt('Do I like rock and roll?');
 var rockA = rockQ.toUpperCase();
+  
   console.log(rockA);
   console.log(correct + 'YES');
 
@@ -59,6 +64,7 @@ var rockA = rockQ.toUpperCase();
   }
 
   //Q5
+  console.log('Q5');
   var colorQ = prompt('Is my favorite color red?');
   var colorA = colorQ.toUpperCase();
   
@@ -73,23 +79,25 @@ var rockA = rockQ.toUpperCase();
     }
 
     //Q6
+    console.log('Q6:');
     var num = Math.floor(Math.random() * 10) + 1;
-    console.log('number = ' + num);
     var numGuess = parseInt(prompt('I\'m thinking of  number between 1 and 10, can you guess what it is? '));
     
+    console.log('number = ' + num);
+
     var cnt = 1;
     while((num !== numGuess) && (cnt < 5)){
       
       if(num > numGuess){
         alert('too low');
-      }if(num < numGuess){
+      }else if(num < numGuess){
         alert('too high');
       }
       numGuess = parseInt(prompt('Guess again'));
       cnt++;
     }
   
-    console.log(cnt);
+    console.log('cnt = ' + cnt);
 
     if(numGuess === num){
       alert('You got it in ' + cnt  + ' guesses!');
@@ -97,33 +105,39 @@ var rockA = rockQ.toUpperCase();
     } else {
       alert('You loose');
     }
-console.log(name + correctCnt);
+
 
 
 //Q7
 var roommates = ['CAT', 'DASH'];
-var roomieQ = prompt('I live with two people in this class, guess who.');
-var roomieA = roomieQ.toUpperCase();
+var roomCnt = 1;
+var isRoomCorrect = false;
+alert('You have 7 tries to guess the following question, good luck');
 
-for(var i = 0; i < roommates.length; i++ ){
-  var roomCnt = 1;
-  while(roomieA !== roommates[i] && roomCnt < 7){
-    alert('Not quite, try again!');
-    roomCnt++;  
+while (roomCnt < 7) {
+  var roomieQ = prompt('I live with two people in this class, guess who. Guess number: ' + roomCnt);
+  var roomieA = roomieQ.toUpperCase();
   
-    roomieQ = prompt('Guess ' + roomCnt);
-    roomieA = roomieQ.toUpperCase();
+  roomCnt++;
+  
+  for (var i = 0; i < roommates.length; i++) {
+    console.log('in the for loop');
+    
+    if (roomieA === roommates[i]) {
+      alert('Good guess!! you got that in ' + roomCnt + ' guesses.');
+      isRoomCorrect = true;
+      correctCnt++;
+      break;
+    } 
   }
 
-if(roomieA === roommates[i]){
- alert('Good guess!! you got that in ' + roomCnt + ' guesses.');
- correctCnt++;
- break;
-}else{
-  alert('Nice try but you\'re incorrect. My roommates are Dash and Cat');
-}  
-
+  if(isRoomCorrect) {
+    break;
+  }
 }
 
-alert(name + ', you got ' + correctCnt + ' answers correct out of 7');
+if(roomCnt === 7) {
+  alert('Nice try but you\'re incorrect. My roommates are Dash and Cat');
+}
 
+console.log(name + ' you answered ' + correctCnt + ' questions correctly');
