@@ -102,13 +102,13 @@ console.log(name + correctCnt);
 
 //Q7
 var roommates = ['CAT', 'DASH'];
-var roomieQ = prompt('I live with two people in this room, guess who.');
+var roomieQ = prompt('I live with two people in this class, guess who.');
 var roomieA = roomieQ.toUpperCase();
 
 for(var i = 0; i < roommates.length; i++ ){
   var roomCnt = 1;
   while(roomieA !== roommates[i] && roomCnt < 7){
-    alert('No that\'s not it, try again!');
+    alert('Not quite, try again!');
     roomCnt++;  
   
     roomieQ = prompt('Guess ' + roomCnt);
@@ -118,6 +118,7 @@ for(var i = 0; i < roommates.length; i++ ){
 if(roomieA === roommates[i]){
  alert('Good guess!! you got that in ' + roomCnt + ' guesses.');
  correctCnt++;
+ break;
 }else{
   alert('Nice try but you\'re incorrect. My roommates are Dash and Cat');
 }  
