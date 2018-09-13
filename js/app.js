@@ -105,7 +105,7 @@ var roommates = ['CAT', 'DASH'];
 var roomieQ = prompt('I live with two people in this room, guess who.');
 var roomieA = roomieQ.toUpperCase();
 
-for(var i = 0; i < roommates.length(); i++ ){
+for(var i = 0; i < roommates.length; i++ ){
   var roomCnt = 1;
   while(roomieA !== roommates[i] && roomCnt < 7){
     alert('No that\'s not it, try again!');
