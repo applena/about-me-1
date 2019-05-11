@@ -4,22 +4,34 @@ var userName = prompt('Hi! What\'s your name?');
 var correctCnt = 0;
 var correct = 'correct answer: ';
 
-//Q1
-function q1(){
-console.log('Q1');
-var mabelQ = prompt('Do I have a dog named Maple');
-var mabelA = mabelQ.toUpperCase();
+//Q1 
+function questionOne(){
+
+  console.log('Q1');
+
+  var mabelQ = prompt('Do I have a dog named Maple');
+  var mabelA = mabelQ.toUpperCase();
 
   console.log(mabelA);
   console.log(correct + 'NO');
 
   if(mabelA === 'YES' || mabelA === 'YEA' || mabelA === 'YA' || mabelA === 'Y'){
     alert('She wouldn\'t mind if you called her Maple but her name is Mabel');
-  }else{
+  } else {
     alert('Ding, ding, ding!');
     correctCnt++;
   }
+
+  return 'something';
+
 }
+
+questionOne();
+
+
+
+
+ 
 
 //Q2
 function q2(){
